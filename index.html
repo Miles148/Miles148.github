@@ -1,0 +1,219 @@
+<html>
+<head>
+<title>
+Miles' webpage
+</title>
+<style>
+    h1 {
+        color: #ffbf1c;
+        font-size: 230%;
+    }
+
+    body {
+        background-color: #424242;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large
+    }
+
+    marquee {
+        color: rgb(231, 231, 231);
+        font-size: x-large;
+    }
+
+    .list {
+        color: #ffbf1c;
+    }
+
+    p, li {
+        color: white;
+    }
+
+    h2 {
+        color: #ffbf1c;
+        font-weight: 100px;
+    }
+
+    * {box-sizing: border-box;}
+
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8)
+    }
+
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    .ant {
+        height: 100%;
+    width: 100%;
+    max-height: 100vh;
+    max-width: 100vh;
+    object-fit: contain
+    }
+
+    @media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+</head>
+<body>
+<h1><center>My First Webpage</center></h1>
+<marquee><strong>Bruv</strong></marquee>
+<marquee behavior="alternate" direction="up" width="80%"><marquee direction="right"><strong>Bruv</strong></marquee></marquee>
+<hr>
+<p>This is my first web page. I created this page with a <em>plain text</em> Notepad. Then edited in GitPod.</p>
+<p>I used html for all the writing and CSS for color, font, and sizing.</p>
+<p class="list"><strong>My Schedule</strong></p>
+<ol>
+<li>Geometry</li>
+<li>Digtial Media 1</li>
+<li>Honors World Geography</li>
+<li>Enlgish 1</li>
+<li>Honors Physical Science</li>
+<li>Coding</li>
+<li>Conditioning</li>
+</ol>
+<p class="list"><strong>My Interests</strong></p>
+<ul>
+<li>Coding</li>
+<li>Photography</li>
+<li>Gaming</li>
+<li>Computer Science</li>
+</ul>
+<br>
+<br>
+<br>
+<h2><center>Some of my Photography</center></h2>
+<br>
+ <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="assets/3 Beauty.jpg" style="width:100%">
+        <div class="text">Water Reflection</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img class="ant" src="assets/4 Ant.jpg" style="width:100%">
+    <div class="text">An Ants Veiw</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="assets/5 Shape.jpg" style="width:100%">
+    <div class="text">Bird</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+    
+<p><strong>Miles</strong> <em>6th hour</em></p>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
