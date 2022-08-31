@@ -115,10 +115,20 @@ Miles' webpage
     .portrait {
         display: block;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto; 
         height: 75%;
-        viewport-fit: center;
-    } 
+        /* Smartphones portrait and landscape */
+        @media only screen 
+        and (min-device-width : 320px)
+        and (max-device-width : 480px) {
+        }
+        /* Ipad/tabet portrait and landscape */
+        @media only screen 
+        and (min-device-width : 768px)
+        and (max-device-width : 1024px) {
+        }
+        }
+    
 
     @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
