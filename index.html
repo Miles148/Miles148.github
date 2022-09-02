@@ -5,9 +5,40 @@ Miles' webpage
 </title>
 <style>
     h1 {
-        color: #ffbf1c;
+        color: white;
         font-size: 230%;
+        font-weight: 30%;
     }
+   
+      /* navigation menu */
+   nav {
+       background: rgb(216, 179, 14);
+       margin: 0 auto;
+       display: flex;
+       padding: 10px;
+       border-radius: 10px;
+       max-width: 1000px;
+   }
+   h1 {
+       display: flex;
+       align-items: center;
+       color: white;
+       flex: 1;
+       margin: 0;
+   }
+   #nav-ul {
+       list-style-image: none;
+        margin-left: 200px;
+   }
+   .nav-li {
+       display: inline-block;
+       padding: 0 10px;
+   }
+
+   a {
+       text-decoration: none;
+       color: #fff; 
+   }
 
     body {
         background-color: #424242;
@@ -29,7 +60,7 @@ Miles' webpage
     }
 
     h2 {
-        color: #ffbf1c;
+        color: darkgoldenrod;
         font-weight: 100px;
     }
 
@@ -135,7 +166,17 @@ Miles' webpage
 </style>
 </head>
 <body>
-<h1><center>My First Webpage</center></h1>
+<nav>
+<h1><center>Miles' Website</center></h1>
+<ul>
+    <li>
+        <a href="index.html"> Home </a>
+    </li>
+    <li>
+        <a href="portfolio.html"> Portfolio </a>
+    </li>
+</ul>
+</nav>
 <marquee><strong>Bruv</strong></marquee>
 <marquee behavior="alternate" direction="up" width="100%"><marquee direction="right"><strong>Bruv</strong></marquee></marquee>
 <hr>
