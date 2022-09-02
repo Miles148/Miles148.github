@@ -7,17 +7,17 @@ Miles' webpage
     h1 {
         color: white;
         font-size: 230%;
-        font-weight: 30%;
     }
    
       /* navigation menu */
    nav {
-       background: rgb(216, 179, 14);
+       background: rgb(241, 207, 17);
        margin: 0 auto;
        display: flex;
-       padding: 10px;
+       padding: 25px;
        border-radius: 10px;
        max-width: 1000px;
+       box-shadow: 6px 6px #0000004b;
    }
    h1 {
        display: flex;
@@ -37,7 +37,7 @@ Miles' webpage
 
    a {
        text-decoration: none;
-       color: #fff; 
+       color: white; 
    }
 
     body {
@@ -56,11 +56,11 @@ Miles' webpage
     }
 
     p, li {
-        color: white;
+        color: rgb(0, 0, 0);
     }
 
     h2 {
-        color: darkgoldenrod;
+        color: #edb200;
         font-weight: 100px;
     }
 
@@ -68,6 +68,12 @@ Miles' webpage
         max-width: 1000px;
         position: relative;
         margin: auto;
+    }
+
+    .slideshow-img {
+        border: #ffffff 10px;
+        border-style: outset;
+        border-radius: 10px;
     }
 
     .mySlides {
@@ -147,7 +153,7 @@ Miles' webpage
         margin-right: auto; 
         height: 75%;
         /* Smartphones portrait and landscape */
-        @media only screen 
+         @media only screen 
         and (min-device-width : 320px)
         and (max-device-width : 480px) {
         }
@@ -163,26 +169,58 @@ Miles' webpage
   .prev, .next,.text {font-size: 11px}
 }
 
+    .boxes {
+        background: rgb(240, 240, 240);
+        border-radius: 10px;
+        padding: 30px;
+        margin: auto;
+        margin-top: 20px;
+        border-color: black;
+        box-shadow: 6px 6px #0000004b;
+        margin-left: 20%;
+        margin-right: 20%;
+        max-width: 900px;
+}
 </style>
 </head>
+
 <body>
-<nav>
-<h1><center>Miles' Website</center></h1>
-<ul>
-    <li>
-        <a href="index.html"> Home </a>
-    </li>
-    <li>
-        <a href="portfolio.html"> Portfolio </a>
-    </li>
-</ul>
-</nav>
+    <nav>
+        <h1>Miles' Website</h1>
+            <ul>
+                <li class="nav-li">
+                    <a href="index.html"><b>Home</b></a>
+                </li>
+                <li class="nav-li">
+                    <a href="portfolio.html"><b>Portfolio</b></a>
+                </li>
+            </ul>
+    </nav>
+    <br>
 <marquee><strong>Bruv</strong></marquee>
 <marquee behavior="alternate" direction="up" width="100%"><marquee direction="right"><strong>Bruv</strong></marquee></marquee>
 <hr>
-<p>This is my first web page. I created this page with a <em>plain text</em> Notepad then edited in GitPod.</p>
-<p>I used html for all the writing and CSS for color, font, and sizing and used Java script for the slide show for my photography</p>
-<p class="list"><strong>My Schedule</strong></p>
+
+<article class="boxes">
+    <div>
+        <h2>Info</h2>
+        <p>This is my first web page. I created this page with a <em>plain text</em> Notepad then edited in GitPod.</p>
+        <p>I used html for all the writing and CSS for color, font, and sizing and used Java script for the slide show for my photography</p>
+    </div>
+</article>
+
+<article class="boxes">
+<h2><strong>My Interests</strong></h2>
+<ul>
+<li>Coding</li>
+<li>Photography</li>
+<li>Gaming</li>
+<li>Computer Science</li>
+</ul>
+</article>
+
+<article class="boxes">
+<h2><strong>My Schedule</strong></h2>
 <ol>
 <li>Geometry</li>
 <li>Digtial Media 1</li>
@@ -192,13 +230,7 @@ Miles' webpage
 <li>Coding</li>
 <li>Conditioning</li>
 </ol>
-<p class="list"><strong>My Interests</strong></p>
-<ul>
-<li>Coding</li>
-<li>Photography</li>
-<li>Gaming</li>
-<li>Computer Science</li>
-</ul>
+</article>
 <br>
 <br>
 <br>
@@ -208,19 +240,19 @@ Miles' webpage
     
     <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
-        <img src="assets/3 Beauty.jpg" style="width:100%">
+        <img class="slideshow-img" src="assets/3 Beauty.jpg" style="width:100%">
         <div class="text">Water Reflection</div>
 </div>
 
 <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img class="portrait" src="assets/4 Ant.jpg" style="height:80%">
+    <img class="slideshow-img" class="portrait" src="assets/4 Ant.jpg" style="height:80%">
     <div class="text">An Ants Veiw</div>
 </div>
 
 <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="assets/5 Shape.jpg" style="width:100%">
+    <img class="slideshow-img" src="assets/5 Shape.jpg" style="width:100%">
     <div class="text">Bird</div>
 </div>
 
@@ -234,7 +266,6 @@ Miles' webpage
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-    
 <p><strong>Miles</strong> <em>6th hour</em></p>
 <script>
     let slideIndex = 1;
