@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Miles' webpage</title>
+    <style type="text/css">
+          body {
+              background: #424242;
+              color: rgb(45, 45, 45);
+              padding: 10px;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              font-size: large;
+          }
+          header {
+              font-size: 1.5em;
+              font-weight: bold;
+          }
+ 
+          #all-contents {
+              max-width: 800px;
+              margin: auto;
+          }
+ 
+          /* navigation menu */
+          nav {
+              background: rgb(241, 207, 17);
+              margin: 0 auto;
+              display: flex;
+              padding: 10px;
+              border-radius: 10px;
+              box-shadow: 6px 6px #0000004b;
+          }
+          h1 {
+              display: flex;
+              align-items: center;
+              color: rgb(255, 255, 255);
+              flex: 1;
+              margin: 0;
+              font-size: 230%;
+              font-weight: 30%;        
+
+          }
+          #nav-ul {
+              list-style-image: none;
+          }
+          .nav-li {
+              display: inline-block;
+              padding: 0 10px;
+          }
+          .nav-a {
+              text-decoration: none;
+              color: #fff;
+          }
+
+          img {
+            max-width: 1000px;
+            margin-top: 3%;
+            margin-left: -10%;
+            margin-right: 50%;
+            border: white;
+            border-style: groove;
+            border-radius: 10px;
+          }
+
+          .portrait {
+            display: block;
+            margin-top: 3%;
+            margin-left: 30%;
+            margin-right: 20%; 
+            height: 75%;
+            border: white;
+            border-style: groove;
+            border-radius: 10px;
+            /* Smartphones portrait and landscape */
+            @media only screen 
+            and (min-device-width : 320px)
+            and (max-device-width : 480px) {
+            }
+            /* Ipad/tabet portrait and landscape */
+            @media only screen 
+            and (min-device-width : 768px)
+            and (max-device-width : 1024px) {
+            }
+            }
+
+            .land {
+              margin-left: 37%;
+              color: white;
+            }
+
+            .port {
+              margin-left: 40%;
+              margin-top: 3%;
+            }
+    </style>
+    </head>
+        <body>
+          <div id="all-contents">
+            <nav>
+              <h1>Miles' Website</h1>
+              <ul id="nav-ul">
+                <li class="nav-li">
+                  <a class="nav-a" href="index.html"><b>Home</b></a>
+                </li>
+                <li class="nav-li">
+                  <a class="nav-a" href="portfolio.html"><b>Portfolio</b></a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-a" href="images.html"><b>Images</b></a>
+                </li>
+              </ul>
+            </nav>
+            <br>
+            <h1 class="land">Landscape</h1>
+              <img src="assets/3 Beauty.jpg">
+              <img src="assets/5 Shape.jpg">
+              <img src="assets/charger.JPG">
+              <img src="assets/gr86.jpg">
+            <h1 class="port">Portrait</h1>
+              <img class="portrait" src="assets/4 Ant.jpg" style="height: 80%">
+              <img class="portrait" src="assets/challenger.JPG">
+              <img class="portrait" src="assets/half a challenger.JPG">
+        </body>
+</html>
